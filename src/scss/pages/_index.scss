@@ -1,0 +1,217 @@
+.content{
+    max-width: 1160px;
+    margin-bottom: 228px;
+    h1{
+        margin-top: 0;
+        line-height: 150%;
+    }	
+}
+
+.slider{
+    height: 774px;
+    margin-bottom: 220px;
+    background: url(../images/slider/iPhoneXR.jpg) no-repeat  $green-bg right;
+    .slider__block{
+        padding: 128px 0;
+        .slider__content{
+            background-color: #fff;
+            padding: 72px;
+            img{
+                margin-bottom: 16px;
+            }
+            h5{
+                text-transform: uppercase;
+                margin-bottom: 16px;
+            }
+            p{
+                margin-bottom: 59px;
+                max-width: 373px;
+            }
+            .arrow{
+                padding: 20px 18px;
+                border: 1px solid $color-text;
+            }
+        }
+    }
+}
+
+.services{
+    margin-bottom: 228px;
+    h5{
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 83px;
+    }
+    .services__mobile-app--wrapper,
+    .services__web-app--wrapper,
+    .services__ux-design--wrapper
+    {
+        max-width: 496px;        
+    }
+    .services__mobile-app--wrapper,
+    .services__web-app--wrapper
+    {
+        margin-right: 64px;      
+    }
+    .services__wrap img{
+        padding-bottom: 24px;
+    }
+    .services__service {
+        margin-right: 64px;
+    } 
+    .services__service:last-child {
+        margin-right:0;
+    }  
+    .services__text{
+        font-size: 24px;
+        line-height: 150%;
+        margin-top: 16px;
+    }
+    
+}
+
+.team{
+    margin-bottom: 247px;
+    .team__list{
+        flex-wrap: wrap;
+    }
+    .team__list--item {
+        padding-right: 14px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        }        
+        img{
+        background-color:$bacground-block;
+        margin-bottom: 16px;
+        }   
+        .news{
+            font-family: 'Inter', sans-serif; 
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        p{
+            font-family: 'Inter', sans-serif; 
+            opacity: .64;
+        }     
+    } 
+
+
+
+.principles{
+    margin-bottom: 220px;
+}
+
+.principles__item--wrapper{
+    display: flex;
+    justify-content: space-between;
+    .principles__item{
+        margin-right: 64px;
+        .principles__item--head{
+            margin-bottom: 16px;
+        }
+    }
+    .principles__item:last-child{
+        margin-right: 0;
+    }
+}
+.principles{
+    margin-bottom: 220px;
+    .principles__item--text{
+        font-size: 25px;
+        line-height: 150%;
+    }
+}
+
+.principles__item--wrapper{
+    display: inline-flex;
+    .principles__item{
+        min-width: 496px;
+        margin-right: 64px;
+        .principles__item--head{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.contacts{
+    background-color: $bacground-block;
+    h5{
+        padding: 128px 0 0 0;
+    }
+    h4{
+        font-weight: 500;
+        font-size: 42px;
+        margin-bottom: 32px;
+    }
+    .contacts__wrapper{
+        display: inline-flex;
+        justify-content: space-between;
+        margin-bottom: 128px;
+    }
+    .contacts__content--text{
+        font-size: 25px;
+        line-height: 150%;
+        // max-width: 776px;
+    }
+    
+}
+.contacts__form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .form__name{
+        display: flex;
+        input[name="username"]{
+            margin-right: 32px;
+        }
+    }
+    textarea{
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        padding: 16px;
+        resize: none;
+        margin-bottom: 32px;
+    }
+    input{
+        width: 100%;
+    }
+    .form__captcha{ 
+        form{
+            display: flex;
+            justify-content: space-between;
+            label{
+                display: none;
+            }
+        }
+        button{
+            padding: 16px 72px;
+            background-color: $green-button;
+            color: #fff;
+            border: none;
+            text-transform: uppercase;
+        }
+        input[name="captcha"]{
+           width: 48%;;
+        }
+    }
+}
+.team h5,
+.principles h5,
+.contacts h5{
+    margin-bottom: 64px;
+    text-transform: uppercase;
+}
+
+.team__list,
+.slider,
+.services__wrap,
+.principles{
+    display: flex;
+    justify-content:space-between;
+}
+.team__list--item { p{ 
+    font-family: 'Inter', sans-serif; 
+    }    
+}

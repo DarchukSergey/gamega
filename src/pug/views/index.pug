@@ -1,0 +1,126 @@
+extends ../layouts/default.pug
+
+mixin slider(src,header,text)
+            .slider__block
+                    .slider__content
+                        img(src= src)
+                        h5= header
+                        p= text
+                        img.arrow(src="images/slider/arrow.svg")
+
+mixin team(src,name,prof)
+                        li.team__list--item
+                            img(src= src, alt="")
+                            span.news= name
+                            p= prof
+
+block variables
+    - var title = "My Site"
+
+block content
+    section.section  
+        .wrapper 
+            .content               
+                    h1 For each project we find an individual approach, because we understand that our success depends on the success of our clients.
+        .slider
+            .wrapper 
+                .slider__window1
+                    +slider("images/slider/momentum.svg","momentum","App users are taxi drivers that work for taxi aggregators like Uber, Yandex.Taxi, Gett, Citymobil.")
+                //- .slider__window2
+                //-     +slider("images/slider/biller.svg","Biller","App for quick and convenient sharing of a common payment receipt between participants.")
+                //- .slider__window3
+                //-     +slider("images/slider/cnvs.svg","cnvs","CNVS helps the participants of business processes to understand and see the whole picture, focus on the current tasks and build a future strategy. ")
+                //- .slider__window3
+                //-     +slider("images/slider/galactica.svg","ai galactica","The complex solution increases sales, optimizes marketing and improves customer service.")
+                .corporative
+        .services
+            .wrapper
+                h5 Our services
+                .services__wrap 
+                    .services__service.services__mobile-app
+                        .services__mobile-app--icon
+                            img(src="images/icons/mob_app.svg", alt="")
+                        .services__mobile-app--head
+                            h2 Mobile App
+                        .services__mobile-app--text
+                            p.services__text Create an effective mobile app that fits your needs and conditions within a shorter time frame.
+                    .services__service.services__web-app
+                        .services__web-app--icon
+                            img(src="images/icons/web_app.svg", alt="")
+                        .services__web-app--head
+                            h2 Web App
+                        .services__web-app--text
+                            p.services__text Build complex scalable corporate software. Integrate software or expand and upgrade your legacy system.
+                    .services__service.services__ux-design
+                        .services__ux-design--icon
+                            img(src="images/icons/design.svg", alt="")
+                        .services__ux-design--head
+                            h2 UX / UI Design
+                        .services__ux-design--text
+                            p.services__text Create the right product on time with a skilled team that employs a precise and productive approach to design.
+        .team
+            .wrapper
+                h5 Our team
+                ul.team__list                    
+                    +team('images/personalities/Oleg_Gamega.png', 'Oleg Gamega', 'SEO')
+                    +team('images/personalities/Kirill_Navodnii.png', 'Kirill Navodnii', 'Backend developer')
+                    +team('images/personalities/Igor_Dzhugostran.png', 'Igor Dzhugostran ', 'Mobile developer')
+                    +team('images/personalities/Roman_Sandu.png', 'Roman Sandu', 'Mobile developer')
+                    +team('images/personalities/Natalya_Cheban.png', 'Natalya Cheban', 'Mobile developer')
+                    +team('images/personalities/Vlad_Kupny.png', 'Vlad Kupny', 'Frondend developer')
+                    +team('images/personalities/Mikhail_Tyrshu.png', 'Mikhail Tyrshu', 'Frontend developer')
+                    +team('images/personalities/Sergey_Darchuk.png', 'Sergey Darchuk ', 'Frontend developer')
+                    +team('images/personalities/Alexander_Manuel.png', 'Alexander Manuel', 'Frontend developer')
+                    +team('images/personalities/Irina_Bashkirova.png', 'Irina Bashkirova', 'Designer')
+                    +team('images/personalities/Pavel_Shevtsov.png', 'Pavel Shevtsov', 'Designer')
+                    +team('#', 'Join the team', 'We’re happy for a new talent!')
+        .principles
+            .wrapper
+                h5 Principles
+                .principles__item--wrapper
+                    .principles__item
+                        h2.principles__item--head
+                            | Feature
+                        p.principles__item--text
+                            | Development, design or other digital product - we use the best solutions for implementing projects at a high level.
+                    .principles__item
+                        h2.principles__item--head
+                            | Resource
+                        p.principles__item--text
+                            | A team of specialists in the field of information technology: programmers, managers, interface designers.
+                    .principles__item
+                        h2.principles__item--head
+                            | Technology
+                        p.principles__item--text
+                            | Application of technologies for analysis, development, testing, implementation and technical support of software.
+        .contacts
+            .wrapper
+                h5 Contact us
+                .contacts__wrapper
+                    .contacts__content
+                        h4.contacts__content--head
+                            | LET’S WORK TOGETHER
+                        p.contacts__content--text
+                            | For each project we find an individual approach, because we understand that our success depends on the success of our clients.
+                    .contacts__form
+                        .form__name
+                            label(for="username") 
+                            input(type="text" name="username"  placeholder="Name")
+
+                            label(for="userlastname") 
+                            input(type="text" name="userlastname"  placeholder="Name")
+                        .form__title
+                            label(for="projectTitle") 
+                            input(type="text" name="projectTitle"  placeholder="Project title")
+                        .form__project
+                            textarea(type="text" name="projectDetails"  placeholder="Project details" cols="100" rows="5")
+                        .form__captcha
+                            form(method="post")
+                                label(for="captcha")
+                                input(name="captcha" type="text" placeholder="captcha")
+                                button submit
+                    
+
+
+
+

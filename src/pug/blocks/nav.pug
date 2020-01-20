@@ -1,0 +1,18 @@
+- var menuItems = [{title: 'Home', link: '/'}, {title: 'Our projects', link: '/about.html'}, {title: 'About Us', link: '/contact.html'}];
+
+nav.navbar(role="navigation" aria-label="main navigation")
+    a.navbar-item(href="/")
+        img(src="images/logo_head.svg" width="165" height="40")
+    a.navbar-burger.burger(le="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+        span(aria-hidden="true")
+    #navbarBasicExample.navbar-menu
+        .navbar-start
+            each val in menuItems
+                a.navbar-item(href=val.link)= val.title
+            .navbar-lang
+                 a(href="#") Ru
+                 span /
+                 a(href="#") En
+            button Contact US
