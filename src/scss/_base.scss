@@ -1,9 +1,12 @@
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: $color-text;
     font-style: normal;
-    line-height: 150%;
+    // line-height: 150%;
 }
 
 .header{
@@ -61,7 +64,9 @@ button{
 }
 
 .wrapper{
-    margin:0 152px;
+    max-width:1660px;
+    padding:0 30px;
+    margin: 0 auto;    
 }
 .container{
     margin-top: 50px;
@@ -70,6 +75,7 @@ button{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 50px;
 }
 
 .navbar-start{
@@ -106,7 +112,7 @@ button{
     margin-right: 12px;
 }
 
-.footer__container{
+.footer{
     background-color: $color-text;
     color:#fff;
     .container__block{

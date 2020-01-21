@@ -1,6 +1,6 @@
 .content{
     max-width: 1160px;
-    margin-bottom: 228px;
+    margin-bottom: 152px;
     h1{
         margin-top: 0;
         line-height: 150%;
@@ -8,11 +8,27 @@
 }
 
 .slider{
-    height: 774px;
     margin-bottom: 220px;
-    background: url(../images/slider/iPhoneXR.jpg) no-repeat  $green-bg right;
+    .slider__slide--momentum{
+        background: url(../../images/slider/slider_momentum.png) no-repeat  $green-bg right;
+        width: 100%;
+    }
+    .slider__slide--biller{
+        background: url(../../images/slider/slider_biller.png) no-repeat  $blue-bg right;
+        width: 100%;
+    }
+    .slider__slide--cnvs{
+        background: url(../../images/slider/slider_cnvs.png) no-repeat  $whitesmoke-bg right;
+        width: 100%;
+    }
+    .slider__slide--galactica{
+        background: url(../../images/slider/slider_galactica.png) no-repeat  $roualblue-bg right;
+        width: 100%;
+    }            
     .slider__block{
         padding: 128px 0;
+        max-width: 517px;
+        height: 753px;
         .slider__content{
             background-color: #fff;
             padding: 72px;
@@ -26,6 +42,7 @@
             p{
                 margin-bottom: 59px;
                 max-width: 373px;
+                line-height: 150%;
             }
             .arrow{
                 padding: 20px 18px;
@@ -33,10 +50,51 @@
             }
         }
     }
+    .slick-dots{
+        bottom: 98px;
+        left: -745px;
+    }
+    .slick-dots li{  
+        button{
+            background-color: #fff;
+            opacity: 0.5;
+            margin-right: 8px;
+            width: 24px;
+            height: 1px;
+            padding: 1px;
+        }       
+        button:before {
+            font-family: 'slick';
+            font-size: 6px;
+            position: absolute;
+            top: 0;
+            left: 0;        
+            content: '!';
+            text-align: center;
+            width: 10px;
+            height: 2px;
+        }
+        &.slick-active{
+            button{
+                opacity: 1;
+            }     
+    }
+}
+    .nextArrow {
+        font-size: 84px;
+        z-index: 10;
+        bottom: 52px;
+        position: absolute;
+        right: 52px;
+        border: 1px solid #fff;
+        padding: 17px;
+        cursor: pointer;
+    }
+    
 }
 
 .services{
-    margin-bottom: 228px;
+    margin-bottom: 220px;
     h5{
         display: block;
         text-transform: uppercase;
@@ -71,12 +129,13 @@
 }
 
 .team{
-    margin-bottom: 247px;
+    padding-top: 41px;
+    margin-bottom: 220px;
     .team__list{
         flex-wrap: wrap;
     }
     .team__list--item {
-        padding-right: 14px;
+        padding-right: 30px;
         margin-bottom: 40px;
         display: flex;
         flex-direction: column;
@@ -99,6 +158,7 @@
 
 
 .principles{
+    padding-top: 27px;
     margin-bottom: 220px;
 }
 
@@ -110,23 +170,21 @@
         .principles__item--head{
             margin-bottom: 16px;
         }
+        .principles__item--text{
+            font-size: 25px;
+            line-height: 150%;
+        }
     }
     .principles__item:last-child{
         margin-right: 0;
     }
 }
-.principles{
-    margin-bottom: 220px;
-    .principles__item--text{
-        font-size: 25px;
-        line-height: 150%;
-    }
-}
+
 
 .principles__item--wrapper{
     display: inline-flex;
     .principles__item{
-        min-width: 496px;
+        max-width: 496px;
         margin-right: 64px;
         .principles__item--head{
             margin-bottom: 16px;
@@ -193,7 +251,7 @@
             text-transform: uppercase;
         }
         input[name="captcha"]{
-           width: 48%;;
+            width: 48%;
         }
     }
 }
@@ -205,7 +263,6 @@
 }
 
 .team__list,
-.slider,
 .services__wrap,
 .principles{
     display: flex;

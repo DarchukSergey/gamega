@@ -6,13 +6,20 @@ mixin slider(src,header,text)
                         img(src= src)
                         h5= header
                         p= text
-                        img.arrow(src="images/slider/arrow.svg")
+                        a(href="#")
+                            img.arrow(src="images/slider/arrow.svg")
 
-mixin team(src,name,prof)
-                        li.team__list--item
-                            img(src= src, alt="")
-                            span.news= name
-                            p= prof
+mixin team(src,name,prof, link = false)
+    if link
+        a(href="№") link
+        //-     li.team__list--item
+        //- span.news= name
+        //- p= prof
+    else
+        li.team__list--item
+            img(src= src, alt="")
+            span.news= name
+            p= prof
 
 block variables
     - var title = "My Site"
@@ -23,16 +30,19 @@ block content
             .content               
                     h1 For each project we find an individual approach, because we understand that our success depends on the success of our clients.
         .slider
-            .wrapper 
-                .slider__window1
-                    +slider("images/slider/momentum.svg","momentum","App users are taxi drivers that work for taxi aggregators like Uber, Yandex.Taxi, Gett, Citymobil.")
-                //- .slider__window2
-                //-     +slider("images/slider/biller.svg","Biller","App for quick and convenient sharing of a common payment receipt between participants.")
-                //- .slider__window3
-                //-     +slider("images/slider/cnvs.svg","cnvs","CNVS helps the participants of business processes to understand and see the whole picture, focus on the current tasks and build a future strategy. ")
-                //- .slider__window3
-                //-     +slider("images/slider/galactica.svg","ai galactica","The complex solution increases sales, optimizes marketing and improves customer service.")
-                .corporative
+            .slider__slide--momentum
+                .wrapper
+                    +slider("images/slider/momentum_icon.svg","momentum","App users are taxi drivers that work for taxi aggregators like Uber, Yandex.Taxi, Gett, Citymobil.")
+            .slider__slide--biller
+                .wrapper
+                    +slider("images/slider/biller_icon.svg","Biller","App for quick and convenient sharing of a common payment receipt between participants.")
+            .slider__slide--cnvs
+                .wrapper
+                    +slider("images/slider/cnvs_icon.svg","cnvs","CNVS helps the participants of business processes to understand and see the whole picture, focus on the current tasks and build a future strategy. ")
+            .slider__slide--galactica
+                .wrapper
+                    +slider("images/slider/galactica_icon.svg","ai galactica","The complex solution increases sales, optimizes marketing and improves customer service.")
+        .corporative            
         .services
             .wrapper
                 h5 Our services
@@ -70,7 +80,7 @@ block content
                     +team('images/personalities/Vlad_Kupny.png', 'Vlad Kupny', 'Frondend developer')
                     +team('images/personalities/Mikhail_Tyrshu.png', 'Mikhail Tyrshu', 'Frontend developer')
                     +team('images/personalities/Sergey_Darchuk.png', 'Sergey Darchuk ', 'Frontend developer')
-                    +team('images/personalities/Alexander_Manuel.png', 'Alexander Manuel', 'Frontend developer')
+                    +team('images/personalities/Alexander_Manoil.png', 'Alexander Manoil', 'Frontend developer')
                     +team('images/personalities/Irina_Bashkirova.png', 'Irina Bashkirova', 'Designer')
                     +team('images/personalities/Pavel_Shevtsov.png', 'Pavel Shevtsov', 'Designer')
                     +team('#', 'Join the team', 'We’re happy for a new talent!')

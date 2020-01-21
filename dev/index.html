@@ -3,23 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My Site is - My Site</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>My Site is - My Site </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="wrapper">
-                <nav class="navbar" role="navigation" aria-label="main navigation"><a class="navbar-item" href="/"><img src="images/logo_head.svg" width="165" height="40"></a><a class="navbar-burger burger" le="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
-                    <div class="navbar-menu" id="navbarBasicExample">
-                        <div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/about.html">Our projects</a><a class="navbar-item" href="/contact.html">About Us</a>
-                            <div class="navbar-lang"><a href="#">Ru</a><span>/</span><a href="#">En</a></div><button>Contact US</button>
-                        </div>
+        <div class="wrapper">
+            <nav class="navbar" role="navigation" aria-label="main navigation"><a class="navbar-item" href="/"><img src="images/logo_head.svg" width="165" height="40"></a><a class="navbar-burger burger" le="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+                <div class="navbar-menu" id="navbarBasicExample">
+                    <div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/about.html">Our projects</a><a class="navbar-item" href="/contact.html">About Us</a>
+                        <div class="navbar-lang"><a href="#">Ru</a><span>/</span><a href="#">En</a></div><button>Contact US</button>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
         </div>
     </header>
     <section class="section">
@@ -29,18 +29,48 @@
             </div>
         </div>
         <div class="slider">
-            <div class="wrapper">
-                <div class="slider__window1">
+            <div class="slider__slide--momentum">
+                <div class="wrapper">
                     <div class="slider__block">
-                        <div class="slider__content"><img src="images/slider/momentum.svg">
+                        <div class="slider__content"><img src="images/slider/momentum_icon.svg">
                             <h5>momentum</h5>
-                            <p>App users are taxi drivers that work for taxi aggregators like Uber, Yandex.Taxi, Gett, Citymobil.</p><img class="arrow" src="images/slider/arrow.svg">
+                            <p>App users are taxi drivers that work for taxi aggregators like Uber, Yandex.Taxi, Gett, Citymobil.</p><a href="#"><img class="arrow" src="images/slider/arrow.svg"></a>
                         </div>
                     </div>
                 </div>
-                <div class="corporative"></div>
+            </div>
+            <div class="slider__slide--biller">
+                <div class="wrapper">
+                    <div class="slider__block">
+                        <div class="slider__content"><img src="images/slider/biller_icon.svg">
+                            <h5>Biller</h5>
+                            <p>App for quick and convenient sharing of a common payment receipt between participants.</p><a href="#"><img class="arrow" src="images/slider/arrow.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__slide--cnvs">
+                <div class="wrapper">
+                    <div class="slider__block">
+                        <div class="slider__content"><img src="images/slider/cnvs_icon.svg">
+                            <h5>cnvs</h5>
+                            <p>CNVS helps the participants of business processes to understand and see the whole picture, focus on the current tasks and build a future strategy. </p><a href="#"><img class="arrow" src="images/slider/arrow.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider__slide--galactica">
+                <div class="wrapper">
+                    <div class="slider__block">
+                        <div class="slider__content"><img src="images/slider/galactica_icon.svg">
+                            <h5>ai galactica</h5>
+                            <p>The complex solution increases sales, optimizes marketing and improves customer service.</p><a href="#"><img class="arrow" src="images/slider/arrow.svg"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="corporative"> </div>
         <div class="services">
             <div class="wrapper">
                 <h5>Our services</h5>
@@ -103,7 +133,7 @@
                     <li class="team__list--item"><img src="images/personalities/Sergey_Darchuk.png" alt=""><span class="news">Sergey Darchuk </span>
                         <p>Frontend developer</p>
                     </li>
-                    <li class="team__list--item"><img src="images/personalities/Alexander_Manuel.png" alt=""><span class="news">Alexander Manuel</span>
+                    <li class="team__list--item"><img src="images/personalities/Alexander_Manoil.png" alt=""><span class="news">Alexander Manoil</span>
                         <p>Frontend developer</p>
                     </li>
                     <li class="team__list--item"><img src="images/personalities/Irina_Bashkirova.png" alt=""><span class="news">Irina Bashkirova</span>
@@ -158,44 +188,44 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer__container">
-            <div class="wrapper">
-                <div class="container__block">
-                    <div class="container__content">
-                        <div class="container__content--logo"><img src="images/logo_footer.svg" alt=""></div>
-                        <div class="container__content--text">
-                            <h3>We Embody Your Ideas Into </h3>
-                            <h3>Web Mobile Application.</h3>
-                        </div>
-                        <div class="container__content--copyright"><span>© Copyright 2019, Gamega.org. All Rights Reserved.</span></div>
+        <div class="wrapper">
+            <div class="container__block">
+                <div class="container__content">
+                    <div class="container__content--logo"><img src="images/logo_footer.svg" alt=""></div>
+                    <div class="container__content--text">
+                        <h3>We Embody Your Ideas Into </h3>
+                        <h3>Web Mobile Application.</h3>
                     </div>
-                    <div class="container__navigation">
-                        <nav class="navigation__nav">
-                            <h5 class="navigation__nav--title">Menu</h5>
-                            <ul class="navigation__nav--menu">
-                                <li class="navigation__nav--item"> <a class="navigation__nav--link" href="#">Home</a></li>
-                                <li class="navigation__nav--item"> <a class="navigation__nav--link" href="#">Our projects</a></li>
-                                <li class="navigation__nav--item"> <a class="navigation__nav--link" href="#">About Us</a></li>
-                            </ul>
-                        </nav>
-                        <div class="navigation__converce">
-                            <h5>Start a conversation</h5>
-                            <p><a href="mailto:sales@gamega.org">sales@gamega.org</a></p>
-                        </div>
-                        <div class="navigation__socials">
-                            <h5 class="navigation__socials--title">Social</h5>
-                            <ul class="navigation__socials--menu">
-                                <li class="navigation__socials--items"> <a class="navigation__socials--link" href="#">Facebook</a></li>
-                                <li class="navigation__socials--items"> <a class="navigation__socials--link" href="#">Twitter</a></li>
-                                <li class="navigation__socials--items"> <a class="navigation__socials--link" href="#">instagram</a></li>
-                            </ul>
-                        </div>
+                    <div class="container__content--copyright"><span>© Copyright 2019, Gamega.org. All Rights Reserved.</span></div>
+                </div>
+                <div class="container__navigation">
+                    <nav class="navigation__nav">
+                        <h5 class="navigation__nav--title">Menu</h5>
+                        <ul class="navigation__nav--menu">
+                            <li class="navigation__nav--item"> <a class="navigation__nav--link" href="#">Home</a></li>
+                            <li class="navigation__nav--item"> <a class="navigation__nav--link" href="#">Our projects</a></li>
+                            <li class="navigation__nav--item"> <a class="navigation__nav--link" href="#">About Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="navigation__converce">
+                        <h5>Start a conversation</h5>
+                        <p><a href="mailto:sales@gamega.org">sales@gamega.org</a></p>
+                    </div>
+                    <div class="navigation__socials">
+                        <h5 class="navigation__socials--title">Social</h5>
+                        <ul class="navigation__socials--menu">
+                            <li class="navigation__socials--items"> <a class="navigation__socials--link" href="#">Facebook</a></li>
+                            <li class="navigation__socials--items"> <a class="navigation__socials--link" href="#">Twitter</a></li>
+                            <li class="navigation__socials--items"> <a class="navigation__socials--link" href="#">instagram</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
