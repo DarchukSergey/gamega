@@ -1,0 +1,22 @@
+extends ../layouts/default.pug
+
+mixin project(href,src,head,description)
+    .works__item
+        a(href= href)
+            img(src= src)
+        h5= head
+        p= description
+
+block content
+    section.section  
+        .wrapper 
+            .content               
+                h1 Some of the work we’re proud of
+            .works
+                +project('#', 'images/projects/momentum_bg.jpg', 'momentum','App users are taxi drivers that work for taxi aggregators like Uber, Yandex.Taxi, Gett, Citymobil.')
+                +project('#', 'images/projects/biller_bg.jpg', 'Biller','App for quick and convenient sharing of a common payment receipt between participants.')
+                +project('#', 'images/projects/galactica_bg.jpg', 'AI GALACTICA ','App for quick and convenient sharing of a common payment receipt between participants.')
+                +project('#', 'images/projects/cnvs_bg.jpg', 'CNVS','CNVS helps the participants of business processes to understand and see the whole picture, focus on the current tasks and build a future strategy.')
+                +project('#', 'images/projects/system_bg.jpg', 'DA SYSTEMS','Application software for government organisations that manage troubled teens.')
+                +project('#', 'images/projects/footbal_bg.jpg', 'FOOTBALLHD','App for football fans. Supplies with up-to-date news and keeps informed on any events.')
+

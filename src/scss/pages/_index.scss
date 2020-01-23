@@ -34,8 +34,9 @@
             bottom: 75px;
             margin: 0 auto;
             text-align: left;
-            min-width: 1660px;
+            max-width: 1660px;
             padding:0 200px;
+            z-index: 1000;
         }
         .slick-dots li{  
             button{
@@ -158,14 +159,19 @@
         float: left;
         padding-right: 30px;
         margin-bottom: 40px;
-        }        
+        }
         .list__wrap{
             display: flex;
             flex-direction: column;
             img{
-            background-color:$bacground-block;
-            margin-bottom: 16px;
-            }   
+                filter: grayscale(100%);
+                transition: all .7s;
+                margin-bottom: 16px; 
+                &:hover {
+                    filter: none;
+                    background-color: #fff;
+                }
+            }
             .news{
                 font-family: 'Inter', sans-serif; 
                 font-weight: bold;
@@ -175,9 +181,8 @@
                 font-family: 'Inter', sans-serif; 
                 opacity: .64;
             } 
-        }    
+        }     
     } 
-
 
 
 .principles{

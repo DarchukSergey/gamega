@@ -1,4 +1,4 @@
-- var menuItems = [{title: 'Home', link: '/'}, {title: 'Our projects', link: '/about.html'}, {title: 'About Us', link: '/contact.html'}];
+- var menuItems = [{title: 'Home', link: '/'}, {title: 'Our projects', link: '/projects.html'}, {title: 'About Us', link: '/contact.html'}];
 
 nav.navbar(role="navigation" aria-label="main navigation")
     a.navbar-item(href="/")
@@ -12,7 +12,7 @@ nav.navbar(role="navigation" aria-label="main navigation")
             each val in menuItems
                 a.navbar-item(href=val.link)= val.title
             .navbar-lang
-                 a(href="#") Ru
-                 span /
-                 a(href="#") En
+                a(href="#") Ru
+                span /
+                a(href="#") En
             button Contact US
