@@ -35,8 +35,9 @@
             margin: 0 auto;
             text-align: left;
             max-width: 1660px;
-            padding:0 200px;
             z-index: 1000;
+            left: calc(50% + 30px);
+            transform: translateX(-50%);
         }
         .slick-dots li{  
             button{
@@ -48,12 +49,11 @@
                 padding: 1px;
             }       
             button:before {
-                font-family: 'slick';
                 font-size: 6px;
                 position: absolute;
                 top: 0;
                 left: 0;        
-                content: '!';
+                content: '';
                 text-align: center;
                 width: 10px;
                 height: 2px;
@@ -154,36 +154,48 @@
     display: flex;
     .team__list{
         display: block;
-    }
-    .team__list--item {
-        float: left;
-        padding-right: 30px;
-        margin-bottom: 40px;
-        }
-        .list__wrap{
-            display: flex;
-            flex-direction: column;
-            img{
-                filter: grayscale(100%);
-                transition: all .7s;
-                margin-bottom: 16px; 
-                &:hover {
-                    filter: none;
-                    background-color: #fff;
+        margin: 0 -16px;
+        .team__list--item {
+            float: left;
+            width: calc(100% / 6);
+            padding: 0 16px;
+            margin-bottom: 40px;
+            &:last-child{
+                .list__wrap{
+                    img{
+                        background-color:$bacground-block;
+                        padding: 39% 0;
+                    }
                 }
             }
-            .news{
-                font-family: 'Inter', sans-serif; 
-                font-weight: bold;
-                margin-bottom: 8px;
-            }
-            p{
-                font-family: 'Inter', sans-serif; 
-                opacity: .64;
+            .list__wrap{
+                display: flex;
+                flex-direction: column;
+                img{
+                    filter: grayscale(100%);
+                    transition: all .7s;
+                    width: 100%;
+                    max-width: 100%;
+                    margin-bottom: 16px; 
+                    &:hover {
+                        filter: none;
+                        background-color: $footer-nav;
+                    }
+                }
+                .news{
+                    font-family: 'Inter', sans-serif; 
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+                p{
+                    font-family: 'Inter', sans-serif; 
+                    opacity: .64;
+                } 
+                 
             } 
-        }     
-    } 
-
+        }
+    }
+}
 
 .principles{
     padding-top: 27px;
@@ -238,7 +250,7 @@
     .contacts__content--text{
         font-size: 25px;
         line-height: 150%;
-        // max-width: 776px;
+        margin-right: 64px;
     }
     
 }
@@ -296,8 +308,10 @@
 .principles{
     display: flex;
     justify-content:space-between;
+    // flex-flow: wrap;
 }
-.team__list--item { p{ 
-    font-family: 'Inter', sans-serif; 
+.team__list--item { 
+    p{ 
+        font-family: 'Inter', sans-serif; 
     }    
 }
