@@ -10,7 +10,6 @@
     position: relative;
     overflow: hidden;
     .slider{
-        margin-bottom: 220px;
         .slick-track{
             height: 750px;
         }
@@ -31,7 +30,7 @@
             width: 100%;
         }
         .slick-dots{
-            bottom: 75px;
+            bottom: 62px;
             margin: 0 auto;
             text-align: left;
             max-width: 1660px;
@@ -40,6 +39,7 @@
             transform: translateX(-50%);
         }
         .slick-dots li{  
+            margin: 0 8px 0 0;
             button{
                 background-color: #fff;
                 opacity: 0.5;
@@ -101,10 +101,20 @@
                     margin-bottom: 59px;
                     max-width: 373px;
                     line-height: 150%;
+                    font-size: 25px;
                 }
                 .arrow{
-                    padding: 20px 18px;
+                    padding: 17px 27px;
                     border: 1px solid $color-text;
+                    transition: .7s;
+                    background: url(../images/slider/arrow.svg) center center no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    margin-bottom: 0;
+                }
+                .arrow:hover{
+                    width: 192px;
+                    background: url(../images/slider/white_arrow.svg) center center no-repeat #000;
                 }
             }
             
@@ -112,13 +122,15 @@
         
     }
 }
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
 
 .services{
-    margin-bottom: 220px;
     h5{
         display: block;
         text-transform: uppercase;
-        margin-bottom: 83px;
+        padding:220px 0 83px 0;
     }
     .services__mobile-app--wrapper,
     .services__web-app--wrapper,
@@ -149,9 +161,10 @@
 }
 
 .team{
-    padding-top: 41px;
-    margin-bottom: 220px;
     display: flex;
+    h5{
+        padding: 281px 0 64px 0;
+    }
     .team__list{
         display: block;
         margin: 0 -16px;
@@ -164,7 +177,7 @@
                 .list__wrap{
                     img{
                         background-color:$bacground-block;
-                        padding: 39% 0;
+                        padding: 50%;
                     }
                 }
             }
@@ -177,9 +190,11 @@
                     width: 100%;
                     max-width: 100%;
                     margin-bottom: 16px; 
+                    background: url(../../images/personalities/plus.svg) no-repeat center center;
                     &:hover {
                         filter: none;
-                        background-color: $footer-nav;
+                        background: url(../../images/personalities/plus_white.svg) no-repeat center center
+                        $hover-img;
                     }
                 }
                 .news{
@@ -198,8 +213,11 @@
 }
 
 .principles{
-    padding-top: 27px;
     margin-bottom: 220px;
+    h5{
+        padding:128px 0 64px 0;
+        text-transform: uppercase;
+    }
 }
 
 .principles__item--wrapper{
@@ -235,27 +253,31 @@
 .contacts{
     background-color: $bacground-block;
     h5{
-        padding: 128px 0 0 0;
-    }
-    h4{
-        font-weight: 500;
-        font-size: 42px;
-        margin-bottom: 32px;
+        padding: 128px 0 64px 0;
     }
     .contacts__wrapper{
-        display: inline-flex;
-        justify-content: space-between;
-        margin-bottom: 128px;
-    }
-    .contacts__content--text{
-        font-size: 25px;
-        line-height: 150%;
-        margin-right: 64px;
+            display: inline-flex;
+            justify-content: space-between;
+            padding-bottom: 128px;
+        }
+        .contacts__content{
+            width: 50%;
+            h4{
+                font-weight: 500;
+                font-size: 42px;
+                margin-bottom: 32px;
+            }
+            
+            .contacts__content--text{
+                font-size: 25px;
+                line-height: 150%;
+                margin-right: 64px;
+            }
     }
     
 }
 .contacts__form{
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     .form__name{
@@ -290,18 +312,14 @@
             border: none;
             text-transform: uppercase;
             height: 50px;
+            cursor: pointer;
         }
         input[name="captcha"]{
             width: 48%;
         }
     }
 }
-.team h5,
-.principles h5,
-.contacts h5{
-    margin-bottom: 64px;
-    text-transform: uppercase;
-}
+
 
 .team__list,
 .services__wrap,
@@ -314,4 +332,26 @@
     p{ 
         font-family: 'Inter', sans-serif; 
     }    
+}
+
+$retina: 1024px;
+ 
+@media (max-width: $retina){
+    .team {
+        .team__list {
+            .team__list--item {
+            width: calc(100% / 5);
+            }
+        }
+    }
+}
+
+@media (max-width: $retina){
+    .team {
+        .team__list {
+            .team__list--item {
+            width: calc(100% / 4);
+            }
+        }
+    }
 }

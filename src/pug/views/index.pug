@@ -9,7 +9,8 @@ mixin slider-inter(src,header,text)
                 h5= header
                 p= text
                 a(href="#")
-                    img.arrow(src="images/slider/arrow.svg")
+                    span.arrow(src="images/slider/arrow.svg")
+                    //- img.arrow(src="images/slider/white_arrow.svg")
 
 mixin team(src,name,prof, link = false)
     if link
@@ -58,7 +59,8 @@ block content
                 .services__wrap 
                     .services__service.services__mobile-app
                         .services__mobile-app--icon
-                            img(src="images/icons/mob_app.svg", alt="")
+                            span 
+                                img(src="images/icons/mob_app.svg", alt="")
                         .services__mobile-app--head
                             h2 Mobile App
                         .services__mobile-app--text
@@ -92,7 +94,7 @@ block content
                     +team('images/personalities/Alexander_Manoil.png', 'Alexander Manoil', 'Frontend developer')
                     +team('images/personalities/Irina_Bashkirova.png', 'Irina Bashkirova', 'Designer')
                     +team('images/personalities/Pavel_Shevtsov.png', 'Pavel Shevtsov', 'Designer')
-                    +team('images/personalities/plus.svg', 'Join the team', 'We’re happy for a new talent!')
+                    +team('#', 'Join the team', 'We’re happy for a new talent!')
         .principles
             .wrapper
                 h5 Principles
