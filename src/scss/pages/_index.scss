@@ -103,22 +103,57 @@
                     line-height: 150%;
                     font-size: 25px;
                 }
-                .arrow{
-                    padding: 17px 27px;
-                    border: 1px solid $color-text;
-                    transition: .7s;
-                    background: url(../images/slider/arrow.svg) center center no-repeat;
-                    width: 20px;
-                    height: 20px;
-                    margin-bottom: 0;
+                a{
+                    text-decoration: none;
+                    .button {
+                        width : 50px;
+                        height : 48px;
+                        overflow: hidden;
+                        text-align : center;
+                        transition : .2s;
+                        cursor : pointer;
+                        .btnTwo {
+                            position : relative;
+                            width : 200px;
+                            height : 100px;
+                            margin-top: -92px;
+                            background :$color-text;
+                            left : -250px;
+                            transition : .3s;
+                            color:#fff;
+                            text-transform: uppercase;
+                            .btnText2 {
+                                margin-right: -100px;
+                                color: #FFF;
+                                font-size: 12px;
+                                font-weight: 600;
+                            }
+                        }
+                        .btnText {
+                            color: #000;
+                            transition: .3s;
+                            border: 1px solid #000;
+                            width: 48px;
+                            height: 48px;
+                            background: url(../images/slider/arrow.svg) no-repeat center;
+                        }
+                        &:hover{
+                            width:192px;
+                            background-color:$color-text;
+                            .btnTwo{
+                                left: -105px;
+                            }
+                            .btnText{ 
+                            margin-left: 160px;
+                            background: url(../images/slider/white_arrow.svg) no-repeat 0;
+                            border: none;
+                            }
+                        }
+                    
+                    }
                 }
-                .arrow:hover{
-                    width: 192px;
-                    background: url(../images/slider/white_arrow.svg) center center no-repeat #000;
-                }
-            }
-            
         }
+    }
         
     }
 }
@@ -190,10 +225,10 @@
                     width: 100%;
                     max-width: 100%;
                     margin-bottom: 16px; 
-                    background: url(../../images/personalities/plus.svg) no-repeat center center;
+                    background: url(../images/personalities/plus.svg) no-repeat center center;
                     &:hover {
                         filter: none;
-                        background: url(../../images/personalities/plus_white.svg) no-repeat center center
+                        background: url(../images/personalities/plus_white.svg) no-repeat center center
                         $hover-img;
                     }
                 }
@@ -206,7 +241,7 @@
                     font-family: 'Inter', sans-serif; 
                     opacity: .64;
                 } 
-                 
+                
             } 
         }
     }
@@ -335,7 +370,7 @@
 }
 
 $retina: 1024px;
- 
+    
 @media (max-width: $retina){
     .team {
         .team__list {
@@ -355,3 +390,7 @@ $retina: 1024px;
         }
     }
 }
+
+::-webkit-input-placeholder {color:$footer-nav;}
+::-moz-placeholder          {color:$footer-nav;}
+:-ms-input-placeholder      {color:$footer-nav;}
