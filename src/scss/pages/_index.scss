@@ -225,10 +225,10 @@
                     width: 100%;
                     max-width: 100%;
                     margin-bottom: 16px; 
-                    background: url(../images/personalities/plus.svg) no-repeat center center;
+                    background: url(../../images/personalities/plus.svg) no-repeat center center;
                     &:hover {
                         filter: none;
-                        background: url(../images/personalities/plus_white.svg) no-repeat center center
+                        background: url(../../images/personalities/plus_white.svg) no-repeat center center
                         $hover-img;
                     }
                 }
@@ -369,23 +369,37 @@
     }    
 }
 
-$retina: 1024px;
+$retina1024: 1024px;
+$retina900: 900px;
+$retina768: 768px;
+
     
-@media (max-width: $retina){
+@media (max-width: $retina1024){
     .team {
         .team__list {
             .team__list--item {
             width: calc(100% / 5);
+            padding: 0 14px;
             }
         }
     }
 }
 
-@media (max-width: $retina){
+@media (max-width: $retina900){
     .team {
         .team__list {
             .team__list--item {
             width: calc(100% / 4);
+            }
+        }
+    }
+}
+
+@media (max-width: $retina768){
+    .team {
+        .team__list {
+            .team__list--item {
+            width: calc(100% / 3);
             }
         }
     }

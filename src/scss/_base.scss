@@ -80,6 +80,7 @@ button{
 
 .navbar-start{
     display: flex;
+    margin-left: 50px;
     
     a.navbar-item,.navbar-lang{
         margin-right: 64px;
@@ -194,3 +195,15 @@ input{
     box-sizing: border-box;
 }
 
+$retina1024: 1024px;
+@media (max-width: $retina1024){
+    .navbar-start{
+        a.navbar-item,.navbar-lang{
+            margin-right: 40px;
+        }
+    }
+    .navigation__nav,
+    .navigation__converce{
+        margin-right: 30px;
+    }
+}
