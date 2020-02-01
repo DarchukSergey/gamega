@@ -15,10 +15,15 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <nav class="navbar" role="navigation" aria-label="main navigation"><a class="navbar-item" href="/"><img src="images/logo_head.svg" width="165" height="40"></a><a class="navbar-burger burger" le="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+            <nav class="navbar" role="navigation" aria-label="main navigation"><a class="navbar-item" href="/"><img src="images/logo_head.svg"></a>
                 <div class="navbar-menu" id="navbarBasicExample">
-                    <div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/projects.html">Our projects</a><a class="navbar-item" href="/contact.html">About Us</a>
-                        <div class="navbar-lang"><a href="#">Ru</a><span>/</span><a href="#">En</a></div><button>Contact US</button>
+                    <div class="navbar-start">
+                        <div class="menu">
+                            <div class="menu__icon"><span></span><span></span><span></span><span></span></div>
+                            <div class="menu__links"> <a class="navbar-item menu__links-item" href="/">Home</a><a class="navbar-item menu__links-item" href="/projects.html">Our projects</a><a class="navbar-item menu__links-item" href="/contact.html">About Us</a>
+                                <div class="navbar-lang menu__links-item"> <a href="#">Ru</a><span>/</span><a href="#">En</a></div><a class="menu__links-item contactUS" href="#">Contact US</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -238,7 +243,7 @@
                         <p class="contacts__content--text">For each project we find an individual approach, because we understand that our success depends on the success of our clients.</p>
                     </div>
                     <div class="contacts__form">
-                        <div class="form__name"><label for="username"> </label><input type="text" name="username" placeholder="Name"><label for="userlastname"> </label><input type="text" name="userlastname" placeholder="Name"></div>
+                        <div class="form__name"><input type="text" name="username" placeholder="Name"><input type="text" name="userlastname" placeholder="Name"></div>
                         <div class="form__title"><label for="projectTitle"> </label><input type="text" name="projectTitle" placeholder="Project title"></div>
                         <div class="form__project"><textarea type="text" name="projectDetails" placeholder="Project details" cols="100" rows="5"></textarea></div>
                         <div class="form__captcha">

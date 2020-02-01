@@ -15,10 +15,15 @@
 <body>
     <header class="header">
         <div class="wrapper">
-            <nav class="navbar" role="navigation" aria-label="main navigation"><a class="navbar-item" href="/"><img src="images/logo_head.svg" width="165" height="40"></a><a class="navbar-burger burger" le="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a>
+            <nav class="navbar" role="navigation" aria-label="main navigation"><a class="navbar-item" href="/"><img src="images/logo_head.svg"></a>
                 <div class="navbar-menu" id="navbarBasicExample">
-                    <div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/projects.html">Our projects</a><a class="navbar-item" href="/contact.html">About Us</a>
-                        <div class="navbar-lang"><a href="#">Ru</a><span>/</span><a href="#">En</a></div><button>Contact US</button>
+                    <div class="navbar-start">
+                        <div class="menu">
+                            <div class="menu__icon"><span></span><span></span><span></span><span></span></div>
+                            <div class="menu__links"> <a class="navbar-item menu__links-item" href="/">Home</a><a class="navbar-item menu__links-item" href="/projects.html">Our projects</a><a class="navbar-item menu__links-item" href="/contact.html">About Us</a>
+                                <div class="navbar-lang menu__links-item"> <a href="#">Ru</a><span>/</span><a href="#">En</a></div><a class="menu__links-item contactUS" href="#">Contact US</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
